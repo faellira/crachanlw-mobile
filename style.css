@@ -24,9 +24,10 @@ body{
 }
 
 main {
-    background: url(images/background.svg);
-    width: 375px;
-    height: 812px;
+    background: url(images/background.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
 }
 
 .content{
@@ -62,14 +63,16 @@ h1{
     margin-bottom: 0.75rem;
 }
 
-.userFooter{
-    display: flex;
+.userDescription{
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.userFooter a{
+.userDescription a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +80,7 @@ h1{
     text-decoration: none;
 }
 
-.userFooter img{
+.userDescription img{
     margin-right: 0.25rem;
 }
 
@@ -88,7 +91,7 @@ h1{
     margin-top: 2rem;
 }
 
-ul{
+#socialMedias{
     display: flex;
     gap: 0.5rem;
     justify-content: center;
@@ -98,7 +101,7 @@ ul{
     list-style: none;
 }
 
-li:hover{
+#socialMedias li:hover{
     transform: scale(1.1);
     filter: brightness(1.5);
     filter: drop-shadow(0 0 0.25rem var(--color-gray))
